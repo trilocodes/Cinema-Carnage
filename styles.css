@@ -1,0 +1,121 @@
+/* styles.css */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Courier New', monospace;
+    color: #ff0000;
+    background-color: #000;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+}
+
+.container {
+    scroll-snap-type: y mandatory;
+    overflow-y: scroll;
+    height: 100vh;
+}
+
+section {
+    height: 100vh;
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.homepage {
+    height: 80vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="black"/><path d="M0,0 L100,100 M100,0 L0,100" stroke="red" stroke-width="1"/></svg>');
+    background-size: 50px 50px;
+}
+
+h1 {
+    font-size: 4rem;
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000;
+    margin-bottom: 1rem;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #ccc;
+}
+
+.graph-placeholder {
+    width: 80%;
+    height: 60%;
+    border: 1px solid #ff0000;
+    background: rgba(20, 0, 0, 0.5);
+    position: relative;
+}
+
+.act-section {
+    background-color: #110000;
+    border-top: 1px solid #ff0000;
+    border-bottom: 1px solid #ff0000;
+}
+
+.act-section h2 {
+    font-size: 3rem;
+    text-shadow: 0 0 5px #ff0000;
+    margin-bottom: 1.5rem;
+}
+
+.act-section p {
+    font-size: 1.2rem;
+    max-width: 600px;
+}
+
+#act64 {
+    background-color: #220000;
+}
+
+#act64 h2 {
+    animation: glitch 1s linear infinite;
+}
+
+.review-section {
+    background-color: #000;
+}
+
+.rating {
+    font-size: 3rem;
+    letter-spacing: 10px;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.star:hover,
+.star.active {
+    color: #ffcc00;
+    text-shadow: 0 0 10px #ffcc00;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 2px 0 red, -2px 0 cyan; }
+    25% { text-shadow: -2px 0 red, 2px 0 cyan; }
+    50% { text-shadow: 2px 0 red, -2px 0 cyan; }
+    75% { text-shadow: -2px 0 red, 2px 0 cyan; }
+    100% { text-shadow: 2px 0 red, -2px 0 cyan; }
+}
+
+/* Blood splatter effects */
+section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M20,20 Q30,10 40,20 T60,20 T80,20" fill="none" stroke="rgba(255,0,0,0.1)" stroke-width="2"/></svg>');
+    pointer-events: none;
+    opacity: 0.3;
+}
