@@ -22,6 +22,16 @@
         <section class="act-section" id="act1">
             <h2>ACT 1</h2>
             <p>First blood is drawn. The horror begins.</p>
+            <!-- Line Chart Container -->
+            <div class="visualization-container">
+                <h3>Average Kill Count by Decade</h1>
+                <svg id="killCountByDecade" width="600px" height="400px"></svg>
+            </div>
+            <!-- Stacked Bar Chart Container -->
+            <div class="visualization-container">
+                <h3>Movie Genres by Decade</h1>
+                <svg id="genreByDecade" width="600px" height="400px"></svg>
+            </div>
         </section>
         
         <section class="act-section" id="act2">
@@ -62,6 +72,7 @@
         </section>
     </div>
 
+    <script src="https://d3js.org/d3.v7.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

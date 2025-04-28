@@ -17,7 +17,7 @@ body, html {
 }
 
 section {
-    height: 100vh;
+    min-height: 100vh;
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
@@ -118,4 +118,25 @@ section::after {
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M20,20 Q30,10 40,20 T60,20 T80,20" fill="none" stroke="rgba(255,0,0,0.1)" stroke-width="2"/></svg>');
     pointer-events: none;
     opacity: 0.3;
+}
+
+/* Common styles for charts*/
+.axis text {
+    fill: white;
+    font-size: 14px;
+  }
+.axis path,
+.axis line {
+stroke: white;
+}
+.label {
+fill: white;
+font-size: 18px;
+font-family: 'Courier New', monospace;
+text-shadow: 0 0 3px white;
+}
+.legend {
+font-size: 16px;
+font-family: 'Courier New', monospace;
+fill: white;
 }
